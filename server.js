@@ -52,7 +52,7 @@ import dotenv from 'dotenv';
 import authRoutes from './src/routes/authRoutes.js';
 import bloodRoutes from './src/routes/bloodRoutes.js';
 // Import your pool from db.js
-import pool from './db.js'; 
+import pool from './src/config/db.js'; 
 
 // Load env variables
 dotenv.config();
