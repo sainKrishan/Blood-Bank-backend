@@ -1,0 +1,21 @@
+blood-bank-backend/
+├── server.js                        # Entry point - Express app, CORS, routes
+├── schema.sql                       # MySQL schema (run once on Railway)
+├── package.json
+├── .env                             # Your actual credentials (never commit this)
+├── .env.example                     # Template for env variables
+├── .gitignore
+└── src/
+    ├── config/
+    │   └── db.js                    # MySQL connection pool
+    ├── controllers/
+    │   ├── authController.js        # Register, Login
+    │   ├── bloodController.js       # Add sample, Get all samples
+    │   └── requestController.js     # Request sample, View requests, Approve/Reject
+    ├── middleware/
+    │   └── authMiddleware.js        # JWT verification + role guard
+    ├── routes/
+    │   ├── authRoutes.js            # POST /api/auth/register, /api/auth/login
+    │   └── bloodRoutes.js           # All /api/blood/* routes
+    └── utils/
+        └── bloodCompatibility.js    # Blood group matching rules
